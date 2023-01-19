@@ -1,0 +1,46 @@
+{
+    "log": {
+        "loglevel": "info"
+    },
+    "dns": {
+        "servers": [
+            "https+local://8.8.8.8/dns-query"
+        ]
+    },
+    "inbounds": [
+        {
+            "port": 8080,
+            "protocol": "trojan",
+            "settings": {
+                "clients": [
+                    {
+                        "password": "Hi9CInozLJxIxDmOKboW"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "wsSettings": {
+                    "path": "qwe"
+                }
+            },
+            "sniffing": {
+                "enabled": fasle,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct",
+            "settings": {
+                "domainStrategy": "UseIPv4"
+            }
+        }
+    ]
+}
